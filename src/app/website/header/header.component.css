@@ -1,5 +1,26 @@
-h1 {
+header h1 {
   font-size: 0em;
   margin-bottom: 0em;
   padding: 3px;
+}
+header h1 span {
+  color: #18d26e;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #141414;
+  transition: all 1s;
+}
+p,
+h1,
+li,
+a {
+  color: #f8f9fa !important;
+  transition: all 0.5s;
+}
+a.nav-link.active,
+a.nav-link:hover {
+  color: #18d26e !important;
 }
