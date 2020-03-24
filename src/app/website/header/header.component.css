@@ -24,3 +24,10 @@ a.nav-link.active,
 a.nav-link:hover {
   color: #18d26e !important;
 }
+.nav-item.sgnup span{
+border-left: 2px solid #18d26e;
+margin-right: .6em;
+}
+.navbar-light .navbar-toggler {
+  color: #f8f9fa;
+}
