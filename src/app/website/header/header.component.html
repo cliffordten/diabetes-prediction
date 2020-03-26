@@ -1,4 +1,4 @@
-<header>
+<header >
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class=" text-left">
@@ -16,20 +16,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-lg-auto text-lg-right text-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home
+                        <a class="nav-link no-bg"  [routerLink]="['/home']" routerLinkActive="active" href="index.html">Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Diabetes</a>
+                        <a class="nav-link bg" routerLinkActive="active" href="#">About Diabetes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog on Diabetes</a>
+                        <a class="nav-link bg" routerLinkActive="active" href="#">Blog on Diabetes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link bg" routerLinkActive="active" href="#">Contact Us</a>
                     </li>
                     <li class="nav-item sgnup">
-                      <a class="nav-link" href="#"><span></span> Sign up</a>
+                      <a class="nav-link bg"  [routerLink]="['/signup']" routerLinkActive="active" href="#"><span></span> Sign up</a>
                   </li>
                 </ul>
             </div>

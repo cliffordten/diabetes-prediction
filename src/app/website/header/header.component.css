@@ -1,32 +1,37 @@
 header h1 {
+  padding: 3px;
   font-size: 0em;
   margin-bottom: 0em;
-  padding: 3px;
 }
 header h1 span {
   color: #18d26e;
 }
 .sticky {
-  position: fixed;
   top: 0;
   width: 100%;
-  background-color: #141414;
-  transition: all 1s;
+  position: fixed;
+  transition: all 2s;
+  background-color: #444!important;
+  z-index: 999;
+}
+header{
+  background-color: #444;
 }
 p,
 h1,
 li,
 a {
-  color: #f8f9fa !important;
   transition: all 0.5s;
+  color: #f8f9fa !important;
+  text-decoration: none !important;
 }
 a.nav-link.active,
 a.nav-link:hover {
   color: #18d26e !important;
 }
 .nav-item.sgnup span{
-border-left: 2px solid #18d26e;
-margin-right: .6em;
+  margin-right: .6em;
+  border-left: 2px solid #18d26e;
 }
 .navbar-light .navbar-toggler {
   color: #f8f9fa;

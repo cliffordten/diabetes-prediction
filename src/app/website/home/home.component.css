@@ -70,7 +70,7 @@ p span:hover {
   transition: all 0.5s;
   letter-spacing: 2px;
   border: 2px solid #18d26e;
-  color: #f8f9fa !important;
+  color: #fff !important;
   background-color: #13af5cc6 !important;
 }
 .btn.btn-primary:hover {
