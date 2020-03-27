@@ -1,0 +1,23 @@
+.container div.col{
+  text-align: initial;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.container{
+  width: 55%;
+}
+/* LARGE SCREENS */
+@media (min-width: 700px) {
+  #borderLeft {
+    top: 85.1%;
+
+  }
+  .contact{
+    width: -webkit-fill-available;
+    padding-bottom: 4.55em !important;
+    height: fit-content;
+  }
+  .btn.btn-primary{
+   margin-top: 2em;
+  }
+}
