@@ -95,7 +95,7 @@ li.active a div.acc h4 {
   #borderLeft {
     border-left: 2px solid #444;
     position: absolute;
-    top: 67.8%;
+    top: 50.6%;
     bottom: 0;
     left: 0;
   }
@@ -161,7 +161,8 @@ li.active a div.acc h4 {
 
 }
 button.btn.btn-primary {
-  padding: 0.6em 5em;
+  padding: 0.6em 0em;
+  width: 12em;
 }
 .row.bn,
 col {
