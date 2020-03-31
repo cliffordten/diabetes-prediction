@@ -1,0 +1,35 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container-fluid{
+  padding: 0;
+  height: 100vh;
+  display:grid;
+  grid-template-areas:
+  " header header"
+  "sidenav main"
+  "footer footer";
+  grid-template-rows: 10vh 1fr 10vh;
+  grid-template-columns: 18% 1fr;
+}
+.header{
+grid-area: header;
+border: 1px solid blue;
+}
+.sidebar{
+  grid-area: sidenav;
+  border: 1px solid #000;
+  overflow-y: scroll;
+}
+.main{
+  grid-area: main;
+  border: 1px solid #ff1111;
+
+}
+.footer{
+  grid-area: footer;
+  border: 1px solid #adf000;
+
+}
