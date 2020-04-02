@@ -1,0 +1,33 @@
+hr{
+  margin-top: 0;
+  width: 80%;
+  margin: auto;
+}
+svg{
+  width: 2em;
+  fill: #f8f9fa;
+}
+ul{
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+li{
+  width: 100%;
+  display: flex;
+  padding: 13px 0 13px 1.3em;
+  padding-left: 1.3em;
+  margin: auto ;
+  border-bottom: 1px solid #0000001f;
+  cursor: pointer;
+}
+li:hover{
+  background-color: #00000047;
+}
+h5{
+  margin: 0;
+  font-size: 18px;
+  margin-left: .5em;
+  margin-top: 7px;
+  color: #f8f9fa;
+}
