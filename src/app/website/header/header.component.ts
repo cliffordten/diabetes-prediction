@@ -12,8 +12,6 @@ export class HeaderComponent implements OnInit {
 
 
 }
-
-
   ngOnInit() {
     $(document).ready(function(){
 
@@ -37,11 +35,6 @@ export class HeaderComponent implements OnInit {
         $('.bg').click(function(){
           $('header').css("background-color","#444");
           window.location.reload()
-        })
-
-        $('.btn.btn-primary.lgn').click(function(){
-          window.location.reload()
-          $('header').css("background-color","#444");
         })
     });
 

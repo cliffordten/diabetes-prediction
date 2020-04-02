@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files #ecf7e9 #f3f8fa*/
 /* 'Sen' */
 @import url('https://fonts.googleapis.com/css?family=Baloo+2|Baloo+Thambi+2|Poppins|Sen&display=swap');
 
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f3f8fa !important;
+  background-color: #ecf7e9 !important;
   font-family: 'Baloo 2', cursive;
   -webkit-font-smoothing: antialiased;
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -22,10 +22,21 @@ body {
 button.btn.btn-primary{
   background-color: #18d26e !important;
   border-color: #18d26e !important;
+  box-shadow: none !important;
 }
 button.btn.btn-primary:hover{
   background-color: #129b52 !important;
   border-color: #129b52 !important;
+  box-shadow: none !important;
+}
+input, input:hover, input:focus{
+  box-shadow: none;
+}
+a{
+  color: #fff !important;
+}
+a:hover{
+  color: #18d26e;
 }
 a.a{
   color: #18d26e !important;

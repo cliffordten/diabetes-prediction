@@ -22,7 +22,7 @@ h1,
 li,
 a {
   transition: all 0.5s;
-  color: #f8f9fa !important;
+  color: #fff !important;
   text-decoration: none !important;
 }
 a.nav-link.active,
@@ -34,5 +34,5 @@ a.nav-link:hover {
   border-left: 2px solid #18d26e;
 }
 .navbar-light .navbar-toggler {
-  color: #f8f9fa;
+  color: #fff;
 }
