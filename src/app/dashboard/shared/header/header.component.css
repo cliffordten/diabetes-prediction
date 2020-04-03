@@ -3,6 +3,7 @@ header{
   color: #fff;
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 div.user-img{
   width: fit-content;
