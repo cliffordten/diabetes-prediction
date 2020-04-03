@@ -1,0 +1,62 @@
+svg
+{
+  width: 4em;
+  fill: #fff;
+}
+.container{
+  padding: 2em;
+}
+.col{
+  display: flex;
+    border-radius: 10px;
+    padding: 2.9em 1em;
+    margin: 1em;
+    margin-bottom: 3em;
+    box-sizing: border-box;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+h5{
+  font-size: 24px;
+  margin-top: 1em;
+  padding: 5px;
+  color: #fff;
+  font-weight: bolder;
+}
+.item1{
+  background: linear-gradient(to bottom right, #59387c, #ff00fb);
+}
+.item2{
+  background: linear-gradient(to bottom right, #387c7a, #00ffa6);
+}
+.item3{
+  background: linear-gradient(to bottom right, #7c3849, #ff0000);
+}
+.item4{
+  background: linear-gradient(to bottom right, #3b6139, #35d10a);
+}
+.item5{
+  background: linear-gradient(to bottom right, #813b3b, #ff0073);
+}
+.item6{
+  background: linear-gradient(to bottom right, #3f3e3c, #e5e5e5);
+}
+.item1:hover{
+  background: linear-gradient(to top left, #59387c, #ff00fb);
+}
+.item2:hover{
+  background: linear-gradient(to top left, #387c7a, #00ffa6);
+}
+.item3:hover{
+  background: linear-gradient(to top left, #7c3849, #ff0000);
+}
+.item4:hover{
+  background: linear-gradient(to top left, #3b6139, #35d10a);
+}
+.item5:hover{
+  background: linear-gradient(to top left, #813b3b, #ff0073);
+}
+.item6:hover{
+  background: linear-gradient(to top left, #3f3e3c, #e5e5e5);
+}
