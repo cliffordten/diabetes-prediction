@@ -21,3 +21,6 @@
    margin-top: 2em;
   }
 }
+.acc-ic, .acc-ico{
+  visibility: hidden;
+}
