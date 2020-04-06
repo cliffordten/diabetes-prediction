@@ -1,0 +1,107 @@
+.container {
+  font-variant: all-small-caps;
+  display: flex;
+  justify-content: space-evenly;
+}
+table {
+  border: 1px solid #ccc;
+  width: fit-content;
+  padding: 0em 0em 1em;
+  background: #fff;
+  overflow: hidden;
+  height: fit-content;
+  border-radius: 10px;
+}
+tr{
+  display: flex;
+  cursor: pointer;
+}
+th,
+td {
+  padding: 0.4em 1em;
+}
+th{
+  font-size: 21px;
+  border: none !important;
+  margin: auto;
+}
+thead tr {
+  border-bottom: 1px solid #ccc !important;
+}
+td {
+  border: none;
+  color: #666;
+}
+svg {
+  width: 1em;
+  cursor: pointer;
+}
+
+tr td:first-child {
+  text-align: start;
+  color: #5a5a5a;
+  padding-right: 0;
+  width: 129px;
+}
+tr td:nth-child(2), td.input{
+  padding-left: 0;
+  text-align: start;
+  font-variant: none;
+  font-size: smaller;
+  font-family: initial;
+  text-transform: capitalize !important;
+}
+td input{
+  border: 1px solid  rgba(0,0,0,.09);
+  border-radius: 2px;
+  margin: 0;
+  text-align: initial;
+  padding-left: .4em;
+  color: #ccc;
+}
+tr td:nth-child(4) svg:first-child{
+  fill: #18d26e;
+  margin-right: .4em;
+}
+tr td:nth-child(4) svg:nth-child(2){
+  fill: red;
+  margin-right: .4em;
+}
+::placeholder{
+  color: #ccc !important;
+  font-size: 12px;
+  padding-left: .4em;
+}
+td .form-check-input{
+  margin-left: .5em;
+}
+td .form-check-label{
+  margin-left: .2em;
+}
+tr td:nth-child(4){
+  display: flex;
+}
+.visibility{
+  visibility: hidden;
+}
+.hide{
+  display: none !important;
+}
+.ch-password td{
+  width: 100% !important;
+  padding-right: .9em !important;
+  background-color: #fff !important;
+  padding-bottom: 0;
+  padding-top: .9em;
+}
+.ch-password td input{
+  padding: .1em;
+}
+.ch-password td button{
+  padding-top: 0.1em;
+  padding-bottom: .1em;
+}
+.ch-password tr.tr td{
+  width: fit-content !important;
+  margin: auto;
+}
