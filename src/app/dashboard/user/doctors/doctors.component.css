@@ -1,0 +1,53 @@
+h3 {
+  width: fit-content;
+  font-size: 1.5rem;
+  color: #495057;
+  font-variant: small-caps;
+  margin-left: 2em;
+  margin-bottom: 1em;;
+}
+.doc{
+  display: flex;
+  font-size: xx-small;
+}
+h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.doc .col {
+  width: fit-content;
+  flex: none;
+  align-self: center;
+  text-align-last: start;
+}
+.doc .col:nth-child(2) {
+  padding: 0;
+  color: #17b35f;
+}
+p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+.doc .row {
+  padding: 0.5em;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 4em;
+  margin-bottom: .5em;
+  border: 1px solid #ccc;
+}
+img {
+  width: 6em;
+}
+.doc .col:nth-child(3) p {
+  text-align-last: right;
+  color: #17b35f;;
+}
+.doc .col .btn.btn-primary {
+  padding: 0 0.5em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1.8rem;
+}

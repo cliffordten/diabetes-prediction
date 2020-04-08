@@ -6,6 +6,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { DiabetesTestComponent } from './diabetes-test/diabetes-test.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+import { ResultHistoryComponent } from './result-history/result-history.component';
 
 const routes: Routes = [
   {path: '', component: UserComponent,
@@ -27,6 +29,12 @@ const routes: Routes = [
       },
       {
         path: 'ask-question', component: AskQuestionComponent
+      },
+      {
+        path: 'doctors', component: DoctorsComponent
+      },
+      {
+        path: 'history', component: ResultHistoryComponent
       }
     ]},
 

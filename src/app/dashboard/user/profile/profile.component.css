@@ -57,7 +57,7 @@ td input{
   margin: 0;
   text-align: initial;
   padding-left: .4em;
-  color: #ccc;
+  color: #666;
 }
 tr td:nth-child(4) svg:first-child{
   fill: #18d26e;
@@ -68,7 +68,7 @@ tr td:nth-child(4) svg:nth-child(2){
   margin-right: .4em;
 }
 ::placeholder{
-  color: #ccc !important;
+  color: #17b35f !important;
   font-size: 12px;
   padding-left: .4em;
 }

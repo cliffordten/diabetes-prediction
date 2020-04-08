@@ -1,0 +1,6 @@
+.doctor .row .col:nth-child(2) p{
+  text-align-last: end;
+}
+.doctor .row .col:nth-child(2){
+  padding-right: 15px;
+}

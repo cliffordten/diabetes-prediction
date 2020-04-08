@@ -12,6 +12,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { DiabetesTestComponent } from './diabetes-test/diabetes-test.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+import { ResultHistoryComponent } from './result-history/result-history.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AskQuestionComponent } from './ask-question/ask-question.component';
     ProfileComponent,
     DiabetesTestComponent,
     StatisticsComponent,
-    AskQuestionComponent
+    AskQuestionComponent,
+    DoctorsComponent,
+    ResultHistoryComponent
   ],
   imports: [
     // BrowserModule,NgModule
