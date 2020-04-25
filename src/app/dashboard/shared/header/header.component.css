@@ -26,12 +26,17 @@ img{
 }
 p{
   /* font-style: italic; */
+text-align: left;
   margin: 0;
   font-size: 13px;
+  text-transform: lowercase !important;
+
 }
 h5{
 font-size: larger;
 margin: 0;
+text-align: justify;
+
 }
 .col.detail{
   padding: 5px;
