@@ -1,0 +1,89 @@
+<div class="container mt-4 ml-5">
+  <div class="row">
+      <h4>Question and Answer Section</h4>
+  </div>
+</div>
+<div class="container mt-4 ">
+  <div class="wrapper mb-4" *ngIf="showQuestion">
+    <div class="wrap">
+      <h6>New Question</h6>
+    </div>
+      <hr>
+    <div class="wrap">
+      <form #askQuesion="ngForm" (ngSubmit)="ask(askQuesion)">
+        <div class="form-group row tag" *ngIf="doc">
+          <div class="col-sm-12">
+            <input name="tag" value="tag: {{docEmail}}" readonly class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input (ngModel)="title" type="title" class="form-control" id="inputTitle" name="title" placeholder="Question Title" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <textarea (ngModel)="question" name="question" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type Your Question" required></textarea>
+          </div>
+        </div>
+        <div class="form-group row last">
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <!-- <button class="btn btn-primary" (click)="cancel()">Cancel</button> -->
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-primary" type="submit" title="Type a quesion" [disabled]="!askQuesion.valid">Ask Question</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="div" *ngFor="let questn of questionArray">
+  <div class="wrapp mb-3" >
+    <hr>
+    <h6>Asked By: {{questn.name}}</h6>
+    <div class="row">
+      <h5>{{questn.title}}</h5>
+    </div>
+    <div class="row b">
+      <p class="p">{{questn.question}} </p>
+    </div>
+    <div class="row a">
+      <p class="date">Date: {{questn.date}}</p>
+      <p>Time: {{questn.time}} </p>
+      <div class="div">
+        <button class="btn btn-primary" (click)="toggleReply(questn.id)">Reply</button>
+        <button class="btn btn-primary btn" title="collapse answer" (click)="toggleAnswer(questn.id)">&#9769;</button>
+      </div>
+    </div>
+    <div class="row" *ngIf="doc">
+      <p>tag: {{docEmail}}</p>
+    </div>
+  </div>
+  <div *ngIf="showAnswer && id == questn.id">
+    <div *ngFor="let res of responsed"  class="wrapp1 mb-3">
+      <h6>Respond by: {{res.name}}</h6>
+    <div class="row b">
+      <p class="p">{{res.response}} </p>
+    </div>
+    <div class="row a">
+      <p class="date">Date: {{res.date}}</p>
+      <p>Time: {{res.time}} </p>
+    </div>
+    </div>
+  </div>
+  <form class="wrapp2 mb-3" *ngIf="showReply && id == questn.id" #reply="ngForm" (ngSubmit)="toggleQuestion(reply, questn.id)">
+    <div class="row">
+      <textarea (ngModel)="response" name="response" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type Your Answer"></textarea>
+    </div>
+    <div class="row1">
+              <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+              <button class="btn btn-primary" type="submit" (click)="toggleQuestion(reply, questn.id)">Post</button>
+    </div>
+  </form>
+</div>
+
+
+</div>

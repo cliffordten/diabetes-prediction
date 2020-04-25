@@ -1,5 +1,5 @@
-.container {
-  font-variant: all-small-caps;
+.container,p {
+  font-variant: all-small-caps !important;
   display: flex;
   justify-content: space-evenly;
 }
@@ -68,7 +68,7 @@ tr td:nth-child(4) svg:nth-child(2){
   margin-right: .4em;
 }
 ::placeholder{
-  color: #17b35f !important;
+  color: #1c7572 !important;
   font-size: 12px;
   padding-left: .4em;
 }
@@ -104,4 +104,12 @@ tr td:nth-child(4){
 .ch-password tr.tr td{
   width: fit-content !important;
   margin: auto;
+}
+tr td:nth-child(2){
+  text-transform: initial !important;
+  
+}
+.btn.btn-primary{
+  background-color: #1c7572 !important;
+  border-color: #1c7572 !important;
 }

@@ -1,0 +1,149 @@
+.form-group
+{
+  text-align-last: left;
+  margin-bottom: .5em;
+}
+.wrap{
+  width: 100%;
+  margin: auto;
+}
+.wrapper{
+  border: 1px solid #ccc;
+  width: 40%;
+  margin: auto;
+  padding: .5em 2em 0px;
+  border-radius: 10px;
+}
+hr{
+  width: 90%;
+  margin: auto;
+  padding: .5em;
+}
+.btn.btn-primary{
+  background-color: #1c7572 !important;
+  border-color: #1c7572 !important;
+  font-size: small;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+.last .col-sm-12{
+  display: flex;
+    justify-content: flex-end;
+    margin: auto;
+}
+.col-sm-6{
+  padding: 0;
+  justify-content: flex-end;
+}
+.col-sm-6:nth-child(2){
+  text-align-last: end;
+}
+.col-sm-6:nth-child(1){
+  text-align-last: start;
+}
+label{
+  margin: 0;
+  padding: 0;
+}
+input, textarea{
+  color: #666;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: small;
+}
+input{
+  height: 25px;
+}
+::placeholder{
+  color: #1c7572a8 !important;
+}
+.tag .form-control{
+  margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: small;
+    height: 24px;
+}
+.wrapp h6, .wrapp h5, .wrapp1 h6, .wrapp1 h5, .wrapp2 h6, .wrapp2 h5{
+  text-align-last: left;
+  font-size: small;
+  font-weight: bold;
+}
+.wrapp .row, .wrapp1 .row, .wrapp2 .row{
+  width: 100%;
+  margin-left: 1em;
+}
+ h6{
+  color: #b4b4b4;
+}
+.wrapp, .wrapp1, .wrapp2{
+  width: 60%;
+  padding-left: 1em;
+  font-size: small;
+  padding: 1em;
+  padding-bottom: .3em;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding-right: 2em;
+  text-align-last: left;
+}
+.wrapp p, .wrapp1 p, .wrapp2 p{
+  margin: 0;
+}
+.wrapp hr{
+  margin-left: 0;
+  text-align-last: left;
+  padding: .3em;
+}
+.date
+{
+margin-right: 1em !important;
+}
+.wrapp .btn.btn-primary, .wrapp2 .btn.btn-primary, .wrapp1 .btn.btn-primary{
+  text-align-last: right;
+}
+.wrapp .row:nth-child(5), .wrapp2 .row:nth-child(5){
+  justify-content: space-between;
+  margin-top: .2em;
+}
+.wrapp2{
+background: none;
+width: 40%;
+border: 1px solid #ccc;
+padding: 0;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    margin: auto;
+}
+.wrapp2 textarea{
+  width: 410px;
+  margin-bottom: .5em;
+}
+.row1{
+  text-align-last: end;
+
+}
+p.p{
+  margin-bottom: .5em;
+}
+textarea
+{
+  text-align: left;
+}
+.wrapp1{
+  margin-left: 5em !important;
+}
+.btn.btn-primary.btn{
+  margin-left: .2em;
+}
+.row.b{
+  border-bottom: 1px solid #ccc;
+padding-bottom: .5em;
+color: #14837f;
+}
+.row.a{
+  padding-top: .5em;
+  color: #b6b6b6;
+}

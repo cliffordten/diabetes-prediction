@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="wrap pb-3">
+        <h2>Diabetes Predictor - Test Assessment</h2>
+        <hr>
+        <form class="col" #submitForm='ngForm' (ngSubmit)="nextQuestion(submitForm)" autocomplete="off" novalidate>
+          <div class="row">
+            <div class="question mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M313.6 474.6h-1a158.1 158.1 0 0 1 0-316.2c94.9 0 168.2 83.1 157 176.6 4 5.1 8.2 9.6 11.2 15.3 13.4-30.3 20.3-62.4 20.3-97.7C501.1 117.5 391.6 8 256.5 8S12 117.5 12 252.6s109.5 244.6 244.5 244.6a237.36 237.36 0 0 0 70.4-10.1c-5.2-3.5-8.9-8.1-13.3-12.5zm-.1-.1l.4.1zm78.4-168.9a99.2 99.2 0 1 0 99.2 99.2 99.18 99.18 0 0 0-99.2-99.2z"/>
+              </svg>
+              <div *ngIf = "!nopage">
+                <!-- <h4>How many times do you eat a day?</h4>
+                <p>The type of food does not matter</p> -->
+                <h4>{{ questionData.question }}</h4>
+                <p>{{ questionData.info }}</p>
+              </div>
+              <div *ngIf = "nopage">
+                <h4>Thank You for taking this little Survey</h4>
+                <p>Click Finished to see your result</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="answers">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="answer" id="" value="">
+                Once
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="answer" id="" value="">
+                Twice
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="answer" id="" value="">
+                Trice
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="answer" id="" value="">
+                Many Often
+              </label>
+            </div>
+          </div> -->
+          <div class="answers div" >
+            <div class="form-group" *ngIf = "!nopage">
+              <input (ngModel)="answer" type="text" name="answer" id="" class="form-control" placeholder="Answer" aria-describedby="helpId" required="true">
+            </div>
+            <div class="form-group" *ngIf = "nopage">
+              <i><p>No more questions</p></i>
+            </div>
+          </div>
+          <div class="row next">
+            <p>{{ pagination.current }}/{{ pagination.total }}</p>
+            <button class="btn btn-primary" *ngIf = "!nopage" [disabled]="submitForm.invalid" (click) = "nextQuestion(submitForm)">Next</button>
+            <button class="btn btn-primary" *ngIf = "nopage" (click) = "finish()">Finish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

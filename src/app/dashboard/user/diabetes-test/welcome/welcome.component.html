@@ -1,0 +1,43 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="wrap">
+        <h4>Diabetes Predictor</h4>
+        <hr>
+        <div class="col">
+          <div class="row">
+            <img src="assets/images/avatar-1.png" alt="">
+          </div>
+          <div class="row row1">
+            <h5>Don't take any risk to allow diabetes <br> in your system</h5>
+            <p>Take a test, know your diabetes status</p>
+          </div>
+          <div class="row row2">
+            <button class="btn btn-primary" (click) = "startTest()">Start Test</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="wrap result">
+        <h4>Test Result</h4>
+        <hr>
+        <div class="col">
+          <div class="row row3">
+            <p *ngIf="show">{{ result }}</p>
+            <div class="row" *ngIf="!show">
+              <img src="assets/images/avatar-1.png" alt="">
+            </div>
+            <div class="row row4" *ngIf="!show">
+              <h5 [class]="result.classname">{{ result.message }}</h5>
+              <p>  {{ result.sub_message }} </p>
+              <p>Click <a href="" [routerLink]="['/home']">Here</a> to learn how to stay save from diabetes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

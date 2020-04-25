@@ -11,10 +11,10 @@
       <tbody>
         <tr>
           <td scope="row">Name : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text" placeholder="edit name" class="form-group"></td>
+          <td class="txt">{{userDetails.firstname}} {{userDetails.lastname}}</td>
+          <td class="input hide"><input #inpu (mouseleave)="onChange(inpu, $event.target.value)" type="text" name="name" value="{{userDetails.firstname}} {{userDetails.lastname}}" placeholder="edit name" class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -29,10 +29,10 @@
         </tr>
         <tr>
           <td scope="row">User Name : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit username"  class="form-group"></td>
+          <td class="txt">{{userDetails.username}}</td>
+          <td class="input hide"><input #inpuu (mouseleave)="onChange(inpuu, $event.target.value)" type="text"  placeholder="edit username" name="username" value="{{userDetails.username}}"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -47,10 +47,14 @@
         </tr>
         <tr>
           <td scope="row">Email : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit email"  class="form-group"></td>
+          <td class="txt">{{ userDetails.email }}</td>
+        </tr>
+        <tr *ngIf="userDetails.accountType == 'doc'">
+          <td scope="row">Specialy: </td>
+          <td class="txt">{{userDetails.profession}}</td>
+          <td class="input hide"><input #inpupr (mouseleave)="onChange(inpupr, $event.target.value)" type="text" name="profession" value="{{userDetails.profession}}"  placeholder="place of birth"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -65,10 +69,10 @@
         </tr>
         <tr>
           <td scope="row">Date of Birth : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit Bith Date - dd/mm/yyyy"  class="form-group"></td>
+          <td class="txt">{{userDetails.dob}}</td>
+          <td class="input hide"><input #inpud (mouseleave)="onChange(inpud, $event.target.value)" type="date" name="dob" value="{{userDetails.dob}}"  placeholder="edit Bith Date - dd/mm/yyyy"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -83,10 +87,10 @@
         </tr>
         <tr>
           <td scope="row">Place of birth : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="place of birth"  class="form-group"></td>
+          <td class="txt">{{userDetails.pob}}</td>
+          <td class="input hide"><input #inpup (mouseleave)="onChange(inpup, $event.target.value)" type="text" name="pob" value="{{userDetails.pob}}"  placeholder="place of birth"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -101,16 +105,16 @@
         </tr>
         <tr>
           <td scope="row">Gender : </td>
-          <td class="txt">Teneng Clifford</td>
+          <td class="txt">{{userDetails.sex}}</td>
           <td class="input hide"><div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="" value="true">
+            <input #inpus (mouseleave)="onChange(inpus, $event.target.value)"  class="form-check-input" type="radio" name="sex" value="male">
             <label for="my-input" class="form-check-label">Male</label>
 
-            <input class="form-check-input" type="radio" name="" value="true">
+            <input #inpus (mouseleave)="onChange(inpus, $event.target.value)"  class="form-check-input" type="radio" name="sex" value='female'>
             <label for="my-input" class="form-check-label">Female</label>
           </div></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -125,10 +129,10 @@
         </tr>
         <tr>
           <td scope="row">Region : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit region"  class="form-group"></td>
+          <td class="txt">{{userDetails.region}}</td>
+          <td class="input hide"><input #inpur (mouseleave)="onChange(inpur, $event.target.value)" type="text" name="region" value="{{userDetails.region}}"  placeholder="edit region"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -143,10 +147,10 @@
         </tr>
         <tr>
           <td scope="row">City : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit city"  class="form-group"></td>
+          <td class="txt">{{userDetails.city}} </td>
+          <td class="input hide"><input #inpuc (mouseleave)="onChange(inpuc, $event.target.value)" type="text" name="city" value="{{userDetails.city}} "  placeholder="edit city"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -161,10 +165,10 @@
         </tr>
         <tr>
           <td scope="row">Tel : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit tel"  class="form-group"></td>
+          <td class="txt">{{userDetails.tel}} </td>
+          <td class="input hide"><input #input (mouseleave)="onChange(input, $event.target.value)" type="text" name="tel" value="{{userDetails.tel}} "  placeholder="edit tel"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -176,7 +180,8 @@
               <path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"/>
             </svg>
           </td>
-        </tr>
+        </tr>        <tr>
+          <td> </td></tr>
       </tbody>
   </table>
 
@@ -191,10 +196,10 @@
       <tbody>
         <tr>
           <td scope="row">Blood Type : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text" placeholder="edit name" class="form-group"></td>
+          <td class="txt">{{userDetails.bloodgrp}} </td>
+          <td class="input hide"><input #inpux (mouseleave)="onChange(inpux, $event.target.value)" type="text" name="bloodgrp" value="{{userDetails.bloodgrp}} " placeholder="edit name" class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -209,10 +214,10 @@
         </tr>
         <tr>
           <td scope="row">Blood Pressure : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text" placeholder="edit name" class="form-group"></td>
+          <td class="txt">{{userDetails.bloodpres}} </td>
+          <td class="input hide"><input #inpuz (mouseleave)="onChange(inpuz, $event.target.value)" type="text" name="bloodpres" value="{{userDetails.bloodpres}} " placeholder="edit name" class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -227,10 +232,10 @@
         </tr>
         <tr>
           <td scope="row">Weight : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit username"  class="form-group"></td>
+          <td class="txt">{{userDetails.weight}} </td>
+          <td class="input hide"><input #inpuw (mouseleave)="onChange(inpuw, $event.target.value)" type="text" name="weight" value="{{userDetails.weight}}"  placeholder="edit username"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -245,10 +250,10 @@
         </tr>
         <tr>
           <td scope="row">Height : </td>
-          <td class="txt">Teneng Clifford</td>
-          <td class="input hide"><input type="text"  placeholder="edit email"  class="form-group"></td>
+          <td class="txt">{{userDetails.height}} </td>
+          <td class="input hide"><input #inpuh (mouseleave)="onChange(inpuh, $event.target.value)" type="text" name="height" value="{{userDetails.height}}"  placeholder="edit email"  class="form-group"></td>
           <td class="bot hide">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <svg (click)="updateDetails()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"/>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -262,8 +267,7 @@
           </td>
         </tr>
         <tr>
-          <td></td>
-        </tr>
+          <td> </td></tr>
       </tbody>
   </table>
 
@@ -277,16 +281,16 @@
       </thead>
       <tbody>
         <tr>
-          <td scope="row"><input type="password" class="form-group" placeholder="old password"> </td>
+          <td scope="row"><input #oldPassword type="password" class="form-group" placeholder="old password"> </td>
         </tr>
         <tr>
-          <td scope="row"><input type="password" class="form-group" placeholder="new password"> </td>
+          <td scope="row"><input #newPassword type="password" class="form-group" placeholder="new password"> </td>
         </tr>
         <tr>
-          <td scope="row"><input type="password" class="form-group" placeholder="comfirm password"> </td>
+          <td scope="row"><input #cPassword type="password" class="form-group" placeholder="comfirm password"> </td>
         </tr>
         <tr class="tr">
-          <td scope="row"><button class="btn btn-primary">Change Password</button> </td>
+          <td scope="row"><button (click)="changePassword(oldPassword.value, newPassword.value, cPassword.value)" class="btn btn-primary">Change Password</button> </td>
         </tr>
 
       </tbody>

@@ -1,40 +1,40 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col">
-      <h3>Our Doctors</h3>
+      <h3>Patient List</h3>
     </div>
   </div>
 </div>
 <div class="container doc">
-  <div class="doctor">
-    <div class="row" *ngFor="let doctor of doctors_first">
+  <div class="patient">
+    <div class="row" *ngFor="let patient of patients_first">
       <div class="col">
         <img src="assets/images/avatar-2.png" alt="doc-image">
       </div>
       <div class="col">
-        <h5>{{doctor.firstname}} {{doctor.lastname}}</h5>
-        <p>{{doctor.profession}}</p>
-        <p>{{doctor.email}} / {{doctor.tel}}</p>
+        <h5>{{patient.firstname}} {{patient.lastname}}</h5>
+        <p>{{patient.profession}}</p>
+        <p>{{patient.email}} / {{patient.tel}}</p>
       </div>
-      <div class="col"> 
+      <div class="col">
         <p>active</p>
-        <button class="btn btn-primary" (click)="askQuestion(doctor.email)">Ask a Question</button>
+        <button class="btn btn-primary" (click)="askQuestion(patient.email)">View Details</button>
       </div>
     </div>
   </div>
-  <div class="doctor">
-    <div class="row" *ngFor="let doctor of doctors_sec">
+  <div class="patient">
+    <div class="row" *ngFor="let patient of patients_sec">
       <div class="col">
         <img src="assets/images/avatar-2.png" alt="doc-image">
       </div>
       <div class="col">
-        <h5>{{doctor.firstname}} {{doctor.lastname}}</h5>
-        <p>{{doctor.profession}}</p>
-        <p>{{doctor.email}} / {{doctor.tel}}</p>
+        <h5>{{patient.firstname}} {{patient.lastname}}</h5>
+        <p>{{patient.profession}}</p>
+        <p>{{patient.email}} / {{patient.tel}}</p>
       </div>
       <div class="col">
         <p>active</p>
-        <button class="btn btn-primary" (click)="askQuestion(doctor.email)">Ask a Question</button>
+        <button class="btn btn-primary" (click)="askQuestion(patient.email)">View Details</button>
       </div>
     </div>
   </div>

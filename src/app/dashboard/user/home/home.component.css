@@ -60,3 +60,11 @@ h5{
 .item6:hover{
   background: linear-gradient(to top left, #3f3e3c, #e5e5e5);
 }
+.itemp
+{
+  background: linear-gradient(to bottom right, #8f340a, #ffae00);
+}
+.itemp:hover
+{
+  background: linear-gradient(to top left, #8f340a, #ffae00);
+}

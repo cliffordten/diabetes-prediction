@@ -1,0 +1,2 @@
+<app-welcome *ngIf = "!startTest" (clickStart) = "switch()"></app-welcome>
+<app-d-test *ngIf = "startTest" (clickFinished) = "switch()"></app-d-test>

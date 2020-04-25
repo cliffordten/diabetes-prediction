@@ -14,6 +14,14 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { ResultHistoryComponent } from './result-history/result-history.component';
+import { WelcomeComponent } from './diabetes-test/welcome/welcome.component';
+import { DTestComponent } from './diabetes-test/d-test/d-test.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { QuestionService } from './diabetes-test/question.service';
+import { TestService } from './diabetes-test/welcome/test.service';
+import { AccountService } from '../shared/services/account.service';
+import { PatientsComponent } from './patients/patients.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +35,19 @@ import { ResultHistoryComponent } from './result-history/result-history.componen
     StatisticsComponent,
     AskQuestionComponent,
     DoctorsComponent,
-    ResultHistoryComponent
+    ResultHistoryComponent,
+    WelcomeComponent,
+    DTestComponent,
+    PatientsComponent,
+    CreatePostComponent,
   ],
   imports: [
     // BrowserModule,NgModule
     UserRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: []
+  providers: [QuestionService, TestService, AccountService]
 })
 export class UserModule { }

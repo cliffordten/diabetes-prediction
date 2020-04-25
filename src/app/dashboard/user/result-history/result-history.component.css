@@ -4,3 +4,41 @@
 .doctor .row .col:nth-child(2){
   padding-right: 15px;
 }
+.btn.btn-primary{
+  float: right;
+}
+.chart .row{
+  width: 500px;
+  padding: 1em 1.5em;
+}
+.doctor .row{
+  justify-content: space-between;
+}
+.row0{
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+    margin-left: 1em;
+}
+.row1{
+  width: 90%;
+  margin: auto;
+}
+hr{
+  margin-top: 0;
+}
+table{
+  display: inline-table;
+font-size: initial;
+text-align-last: left;
+}
+td:nth-child(1){
+  font-size: large;
+  font-variant: all-small-caps;
+}
+.table td{
+  padding: .4rem;
+
+}

@@ -19,7 +19,7 @@ grid-area: header;
 }
 .main{
   grid-area: main;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 .footer{
   grid-area: footer;
