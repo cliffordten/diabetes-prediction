@@ -1,0 +1,174 @@
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
+
+
+
+@Component({
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
+})
+export class SignupComponent implements OnInit {
+  patient = true;
+  doctor = false;
+
+  psignupFrom: FormGroup;
+  dsignupFrom: FormGroup;
+
+  firstnameP: FormControl;
+  lastnameP: FormControl;
+  emailP: FormControl;
+  regionP: FormControl;
+  cityP: FormControl;
+  passwordP: FormControl;
+  cpasswordP: FormControl;
+  sexP: FormControl;
+
+  firstnameD: FormControl;
+  lastnameD: FormControl;
+  emailD: FormControl;
+  passwordD: FormControl;
+  cpasswordD: FormControl;
+  sexD: FormControl;
+  adminCodeD: FormControl;
+  telD: FormControl;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.firstnameP = new FormControl('', [Validators.required, Validators.maxLength(20)]);
+    this.lastnameP = new FormControl('', [Validators.required, Validators.maxLength(20)]);
+    this.emailP = new FormControl('', [Validators.required,]);
+    this.passwordP = new FormControl('', [Validators.required,]);
+    this.cpasswordP = new FormControl('', [Validators.required,]);
+    this.sexP = new FormControl('', [Validators.required,]);
+    this.firstnameD = new FormControl('', [Validators.required, Validators.maxLength(20)]);
+    this.lastnameD = new FormControl('', [Validators.required, Validators.maxLength(20)]);
+    this.emailD = new FormControl('', [Validators.required,]);
+    this.passwordD = new FormControl('', [Validators.required,]);
+    this.cpasswordD = new FormControl('', [Validators.required,]);
+    this.sexD = new FormControl('', [Validators.required,]);
+    this.regionP = new FormControl('', [Validators.required,]);
+    this.cityP = new FormControl('', [Validators.required,]);
+    this.adminCodeD = new FormControl('', [Validators.required,]);
+    this.telD = new FormControl('', [Validators.required, Validators.maxLength(13)]);
+
+    this.psignupFrom = new FormGroup({
+      firstname: this.firstnameP,
+      lastname: this.lastnameP,
+      email: this.emailP,
+      region: this.regionP,
+      city: this.cityP,
+      password: this.passwordP,
+      cpassword: this.cpasswordP,
+      sex: this.sexP,
+    })
+
+
+    this.dsignupFrom = new FormGroup({
+      firstname: this.firstnameD,
+      lastname: this.lastnameD,
+      adminCode: this.adminCodeD,
+      tel: this.telD,
+      email: this.emailD,
+      password: this.passwordD,
+      cpassword: this.cpasswordD,
+      sex: this.sexD,
+    })
+
+  }
+
+  savePatientProfile(formValues) {
+
+    if (this.psignupFrom.valid) {
+      console.log("doctores", formValues)
+    }
+  }
+
+  saveDoctorProfile(formValues) {
+
+    if (this.dsignupFrom.valid) {
+      console.log("doctores", formValues)
+    }
+  }
+
+  validateFirstname() {
+
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateLastname() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateEmail() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateRegion() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateCity() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validatePassword() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateCpassword() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateAdminCode() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+  validateTel() {
+    if (this.firstnameP) {
+      return this.required(this.firstnameP);
+    }
+    return this.required(this.firstnameD);
+  }
+
+  required(field) {
+    return field.valid || field.untouched;
+  }
+  makeRequiredp() {
+    return this.validateFirstname || this.validateLastname || this.validateEmail || this.validateRegion || this.validateCity || this.validatePassword || this.validateCpassword;
+  }
+  makeRequiredd() {
+    return this.validateFirstname || this.validateLastname || this.validateEmail || this.validateAdminCode || this.validateTel || this.validatePassword || this.validateCpassword;
+  }
+
+  changeAccount(accountType) {
+    if (accountType == "patient") {
+      this.patient = true;
+      this.doctor = false;
+      return;
+    }
+    if (accountType == "doctor") {
+      this.patient = false;
+      this.doctor = true;
+      return;
+    }
+  }
+
+}

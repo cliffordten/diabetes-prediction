@@ -10,6 +10,13 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+h1,h2,h3,h4,h5,h6{
+  text-transform: capitalize !important;
+
+}
+[disabled]:hover{
+  cursor: not-allowed;
+  }
 body {
   background-color: #ecf7e9 !important;
   font-family: 'Baloo 2', cursive;
@@ -20,7 +27,7 @@ body {
   color: #666;
 }
 button.btn.btn-primary{
-  background-color: #18d26e !important;
+  background-color: #18d25c !important;
   border-color: #18d26e !important;
   box-shadow: none !important;
 }
@@ -44,4 +51,36 @@ a.a{
 }
 a.a:hover{
   color: #444 !important;
+}
+.form-control:focus{
+  border-color: #18d26e;
+  outline: 0;
+  -webkit-box-shadow:  0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #18d26e !important; ;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #18d26e !important;;
+  outline:  0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #18d26e !important;;
+}
+textarea:focus,
+select:focus,
+select:active,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #18d26e !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 1px #18d26e !important;
+  outline: 0 none;
+}
+.error{
+  color: #ff0000;
 }

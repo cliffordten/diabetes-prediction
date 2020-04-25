@@ -4,6 +4,7 @@ import { HomeComponent } from './website/home/home.component';
 import { LoginComponent } from './website/login/login.component';
 import { SignupComponent } from './website/signup/signup.component';
 import { Page404Component } from './shared/page404/page404.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -11,8 +12,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: "full" },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'user', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule)},
-  { path: '**', component: Page404Component }
+  { path: 'user', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard]},
+  { path: 'doc', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard]},
+  { path: '404page', component: Page404Component },
+  { path: '**', redirectTo: '/404page', pathMatch: "full" }
 ];
 
 @NgModule({
