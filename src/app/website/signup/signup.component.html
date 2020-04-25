@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="container contain mt-4">
+<div class="container contain mt-1">
   <div class="wrapper animated bounceInLeft">
     <div class="company-info">
       <h4>Choose Your Account</h4>
@@ -41,143 +41,12 @@
       <hr>
 
     <!-- patient signup -->
-      <div class="container" *ngIf="patient">
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="First Name" aria-describedby="helpId">
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="Last Name" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="email" name="" class="form-control" placeholder="Email" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="Region" aria-describedby="helpId">
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="City" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="password" name="" class="form-control" placeholder="Password" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="password" name="" class="form-control" placeholder="Confirm Password" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col ck">
-            <div class="form-check form-check-inline mr-2">
-              <input id="my-input" class="form-check-input" type="checkbox" name="sex" value="true">
-              <label for="my-input" class="form-check-label">Male</label>
-            </div>
-          </div>
-          <div class="col ck">
-            <div class="form-check form-check-inline mr-2">
-              <input id="my-input2" class="form-check-input" type="checkbox" name="sex" value="true">
-              <label for="my-input2" class="form-check-label">Female</label>
-            </div>
-          </div>
-        </div>
-        <div class="row bn">
-          <div class="col">
-            <button class="btn btn-primary">Sign up</button>
-          </div>
-        </div>
-      </div>
+    <app-pat-signup *ngIf="patient" ></app-pat-signup>
+    <!-- doctor signup -->
+    <app-doc-signup *ngIf="doctor" ></app-doc-signup>
 
 
-      <!-- doctor signup -->
-      <div class="container" *ngIf="doctor" >
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="First Name" aria-describedby="helpId">
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="Last Name" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="Code from admin" aria-describedby="helpId">
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-group">
-              <input type="text" name="" class="form-control" placeholder="Tel" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="email" name="" class="form-control" placeholder="Email" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="password" name="" class="form-control" placeholder="Password" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-              <input type="password" name="" class="form-control" placeholder="Confirm Password" aria-describedby="helpId">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col ck">
-            <div class="form-check form-check-inline mr-2">
-              <input id="my-input" class="form-check-input" type="checkbox" name="sex" value="true">
-              <label for="my-input" class="form-check-label">Male</label>
-            </div>
-          </div>
-          <div class="col ck">
-            <div class="form-check form-check-inline mr-2">
-              <input id="my-input2" class="form-check-input" type="checkbox" name="sex" value="true">
-              <label for="my-input2" class="form-check-label">Female</label>
-            </div>
-          </div>
-        </div>
-        <div class="row bn">
-          <div class="col">
-            <button class="btn btn-primary">Sign up</button>
-          </div>
-        </div>
-      </div>
 
 
-    </div>
-      </div>
+  </div>
 </div>

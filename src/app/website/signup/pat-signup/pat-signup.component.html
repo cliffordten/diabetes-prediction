@@ -1,0 +1,79 @@
+<form [formGroup]="signupForm" (ngSubmit)="saveProfile(signupForm.value)" class="container"  autocomplete="off" novalidate>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="firstname" type="text" name="firstname" class="form-control" placeholder="First Name" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validateFirstname()}">*</em>
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="lastname" type="text" name="lastname" class="form-control" placeholder="Last Name" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validateLastname()}">*</em>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="email" type="email" name="email" class="form-control" placeholder="Email" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validateEmail() || (validateEmail() && signupForm.controls.email?.errors?.pattern)}">*</em>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="region" type="text" name="region" class="form-control" placeholder="Region" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validateRegion()}">*</em>
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="city" type="text" name="city" class="form-control" placeholder="City" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validateCity()}">*</em>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="password" type="password" name="password" class="form-control" placeholder="Password" aria-describedby="helpId">
+      </div>
+    </div>
+    <em [ngClass]="{'em':!validatePassword() || (validatePassword() && signupForm.controls.password?.errors?.minlength)}">*</em>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input formControlName="cpassword" type="password" name="cpassword" class="form-control" placeholder="Confirm Password" aria-describedby="helpId">
+      </div>
+    </div>
+     <em [ngClass]="{'em':!validateCpassword()}">*</em>
+  </div>
+  <div class="row">
+    <div class="col ck">
+      <div class="form-check form-check-inline mr-2">
+        <input formControlName="sex" id="my-input" class="form-check-input" type="radio" name="sex" value="male">
+        <label for="my-input" class="form-check-label">Male</label>
+      </div>
+    </div>
+    <div class="col ck">
+      <div class="form-check form-check-inline mr-2">
+        <input formControlName="sex" id="my-input2" class="form-check-input" type="radio" name="sex" value="female">
+        <label for="my-input2" class="form-check-label">Female</label>
+      </div>
+    </div>
+  </div>
+  <p class='error' *ngIf='makeRequired()'>*Required field / fields</p>
+  <p class='error' *ngIf='mouseOverLogin'>All Fields are required</p>
+  <p class='error' *ngIf='validateEmail() && signupForm.controls.email?.errors?.pattern'>*Must be valid email</p>
+  <p class='error' *ngIf='validatePassword() && signupForm.controls.password?.errors?.minlength'>*Passwords must be atleast 8 character</p>
+  <div class="row bn">
+    <span  (mouseleave)="mouseOverLogin=false">
+      <div class="col">
+        <button class="btn btn-primary" name='sinuppatients'>Sign up</button>
+      </div>
+    </span>
+  </div>
+</form>

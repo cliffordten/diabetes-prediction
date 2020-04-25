@@ -1,19 +1,18 @@
-
-hr{
+hr {
   width: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 2px solid #18d26e;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid #18d26e;
 }
-hr.hr{
+hr.hr {
   display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px solid rgba(0,0,0,.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-h3{
-  font-size:1.4em ;
+h3 {
+  font-size: 1.4em;
 }
 .form-control {
   background-color: #eee !important;
@@ -27,12 +26,12 @@ li:hover {
   background-color: #129b52;
   border-radius: 10px 0 0 10px;
 }
-.contact div.container{
+.contact div.container {
   width: 100%;
 }
-.col.ck{
+.col.ck {
   padding-bottom: 0 !important;
-    height: 2.6em !important;
+  height: 2.6em !important;
 }
 .container.contain div.col {
   text-align: initial;
@@ -100,7 +99,6 @@ li.active a div.acc h4 {
     left: 0;
   }
 
-
   .wrapper {
     display: flex;
   }
@@ -130,7 +128,6 @@ li.active a div.acc h4 {
     width: max-content;
     padding: 1em !important;
     padding-bottom: 0 !important;
-
   }
   .acc h4 {
     width: max-content;
@@ -158,7 +155,6 @@ li.active a div.acc h4 {
     border-left: none;
     border-radius: 0 8px 8px 0px;
   }
-
 }
 button.btn.btn-primary {
   padding: 0.6em 0em;
@@ -170,3 +166,22 @@ col {
   width: fit-content !important;
   margin: auto !important;
 }
+em{
+  display: none;
+}
+.em {
+  display: block;
+  height: 30px;
+  margin-top: 3px;
+  margin-left: -11px;
+  color: red;
+}
+.error {
+  margin: 0;
+  width: 100%;
+  text-align: end;
+  font-size: smaller;
+  font-style: italic;
+  color: red;
+}
+
