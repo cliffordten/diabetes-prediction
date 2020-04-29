@@ -9,6 +9,7 @@ import { AccountService } from '../../shared/services/account.service';
 export class HomeComponent implements OnInit {
  userDetails: any;
  switch = true;
+ admin = false;
 
   constructor(private details: AccountService) { }
 
@@ -21,6 +22,9 @@ export class HomeComponent implements OnInit {
         }
         if(data.accountType == "user"){
           this.switch = true;
+        }
+        if(data.accountType == "admin"){
+          this.admin = true;
         }
       }
     },(err:any) => {

@@ -10,6 +10,7 @@ import { AccountService } from '../services/account.service';
 export class SideNavComponent implements OnInit {
   userDetails: any;
   switch = true
+  admin = false
 
   constructor(private details: AccountService, private route: Router) { }
 
@@ -22,6 +23,9 @@ export class SideNavComponent implements OnInit {
         }
         if(data.accountType == "user"){
           this.switch = true;
+        }
+        if(data.accountType == "admin"){
+          this.admin = true;
         }
       }
     },(err:any) => {

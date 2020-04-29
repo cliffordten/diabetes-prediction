@@ -59,6 +59,13 @@ export class AccountService {
     return this.http.get('/api/v1/user/response/'+id, this.options);
   }
 
+  addDoctor(data){
+    return this.http.post("/api/v1/add/doctor", data, this.options);
+  }
+
+  getHospitalDoc(){
+    return this.http.get("/api/v1/all/doctor", this.options)
+  }
 
 
   private message = new BehaviorSubject('An Error Occured please type doctor email');

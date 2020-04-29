@@ -10,6 +10,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { ResultHistoryComponent } from './result-history/result-history.component';
 import { PatientsComponent } from './patients/patients.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { AddDoctorsComponent } from '../admin/add-doctors/add-doctors.component';
 const routes: Routes = [
   {path: '', component: UserComponent,
     children: [
@@ -46,6 +47,10 @@ const routes: Routes = [
       ,
       {
         path: 'questions', component: AskQuestionComponent
+      }
+      ,
+      {
+        path: 'add-doctors', component: AddDoctorsComponent
       }
     ]},
 

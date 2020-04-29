@@ -38,7 +38,7 @@ id
           this.questionArray = data
         }
       }, err =>{
-        this.toastr.error(err.error.msg)
+        this.toastr.error(err.error.message)
       })
 
 

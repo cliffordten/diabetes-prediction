@@ -22,6 +22,7 @@ import { TestService } from './diabetes-test/welcome/test.service';
 import { AccountService } from '../shared/services/account.service';
 import { PatientsComponent } from './patients/patients.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { AddDoctorsComponent } from '../admin/add-doctors/add-doctors.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
     DTestComponent,
     PatientsComponent,
     CreatePostComponent,
+    AddDoctorsComponent,
   ],
   imports: [
     // BrowserModule,NgModule
