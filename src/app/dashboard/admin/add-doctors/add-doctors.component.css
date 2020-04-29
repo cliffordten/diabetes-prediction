@@ -1,0 +1,32 @@
+.container{
+  text-align-last: left;
+}
+.row{
+  width: 60%;
+  margin: auto;
+}
+.row.row1{
+  width:80%;
+  margin: auto;
+}
+form{
+  width: 60%;
+  padding: 1em;
+  margin: auto;
+  border: 1px solid #ccc;
+}
+.btn.btn-primary{
+  width: 100%;
+  text-align-last: center;
+}
+.row.row2{
+  width: 70%;
+}
+.th{
+  text-align-last: center;
+}
+table
+{
+  display: table;
+  border: 1px solid #ccc;
+}
