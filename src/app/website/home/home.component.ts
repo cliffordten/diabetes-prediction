@@ -19,5 +19,10 @@ export class HomeComponent implements OnInit {
        })
    });
   }
+  click(){
+    $(document).ready(function(){
+      window.location.reload()
+  });
+  }
 
 }

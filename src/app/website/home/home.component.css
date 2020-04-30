@@ -1,7 +1,7 @@
-p,
-h3,
-small,
-h5 {
+.slider-main p,
+.slider-main h3,
+.slider-main small,
+.slider-main h5 {
   color: #fff !important;
 }
 #slider-main {
@@ -97,4 +97,97 @@ button:hover svg {
 small{
   letter-spacing: 6px;
   margin-top: 1em;
+}
+.mt-4{
+  margin-top: 8em !important;
+}
+
+.row.rw.mt-5{
+  word-wrap: break-word;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: .3rem;
+  margin-top: 1em !important;
+  display: flex;
+}
+.row.rw.mt-5 img{
+  border-radius: .3rem;
+  width: 12rem;
+}
+.row.rw.mt-5 *{
+  padding: .5em;
+}
+.col, .col h5, .col p{
+  padding-left: 0em !important;
+}
+.row.rw.mt-5 h5{
+  width: fit-content;
+  font-weight: bold;
+  margin: 0;
+}
+.row.rw.mt-5 p{
+  margin: 0;
+  text-align-last: left;
+
+  text-indent: 50px;
+  text-align: justify;
+}
+.col{
+  margin: 0;
+  padding: .5em !important;
+}
+.row.rw.mt-5 .btn.btn-primary{
+  text-align-last: right;
+  letter-spacing: initial !important;
+  padding: .2em .5em;
+}
+.col .row{
+  justify-content: flex-end ;
+  margin: 0;
+  padding: 0 .5em 0 0 !important;
+}
+.container.mt-4{
+  width: 65%;
+}
+.center{
+  text-align-last: center !important;
+}
+.row.rr
+{
+  width: 95%;
+  margin: auto;
+  justify-content: center;
+  padding-bottom: 0 !important;
+}
+hr{
+  width: 5%;
+  border: 1.5px solid #18d26e;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin: auto !important;
+}
+.row.rr img{
+  width: 40em !important;
+  border: 1px solid #e7e7e7;
+}
+h6
+{
+  font-weight: bold;
+font-size: 14px;
+  font-style: italic;
+  padding: 0 !important;
+}
+.col.d.p a{
+  color: #009dff !important;
+  font-style: italic;
+  font-size: 13px;
+  display: block;
+  padding: 0 !important;
+}
+
+a{
+  color: #18d25c !important;
+}
+.col.d{
+  text-align-last: left;
 }

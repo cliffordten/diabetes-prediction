@@ -41,6 +41,10 @@ export class LoginComponent implements OnInit {
             this.route.navigate(["/doc"])
             return
           }
+          if(data.accountType == "admin"){
+            this.route.navigate(["/admin"])
+            return
+          }
           this.route.navigate(["/user"])
         }
       },(err:any) => {
