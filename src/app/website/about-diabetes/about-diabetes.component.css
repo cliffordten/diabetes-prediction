@@ -1,0 +1,56 @@
+.container{
+width: 65%;
+}
+img{
+  width: 100%;
+  height: 60vh;
+}
+ul, li, .row.r{
+  text-align-last: left;
+}
+.row{
+  background-color: #fff;
+  margin: 0;
+  padding: 1em;
+}
+h4,h5{
+  font-weight: bold;
+  margin-left: .5em;
+}
+.bold
+{
+  font-weight: bold;
+}
+li{
+  padding: .7em;
+  text-align: justify;
+}
+a{
+  color: #18d25c !important;
+}
+p.mt-3{
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+div.d{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+div.d li{
+  width: 300px;
+  padding: .4rem !important;
+  text-transform: capitalize;
+}
+h6
+{
+  font-weight: bold;
+font-size: 14px;
+  font-style: italic;
+}
+.col.p a{
+  color: #009dff !important;
+  font-style: italic;
+  font-size: 13px;
+  display: block;
+}
