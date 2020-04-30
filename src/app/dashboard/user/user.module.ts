@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgChartjsModule } from 'ng-chartjs';
 
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user-routing.module';
@@ -23,6 +24,7 @@ import { AccountService } from '../shared/services/account.service';
 import { PatientsComponent } from './patients/patients.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { AddDoctorsComponent } from '../admin/add-doctors/add-doctors.component';
+import { LoadderComponent } from './diabetes-test/d-test/loadder/loadder.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { AddDoctorsComponent } from '../admin/add-doctors/add-doctors.component'
     PatientsComponent,
     CreatePostComponent,
     AddDoctorsComponent,
+    LoadderComponent,
   ],
   imports: [
     // BrowserModule,NgModule
     UserRoutingModule,
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgChartjsModule,
   ],
   providers: [QuestionService, TestService, AccountService]
 })

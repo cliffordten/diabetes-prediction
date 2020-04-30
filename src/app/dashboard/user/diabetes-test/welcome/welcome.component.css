@@ -63,3 +63,8 @@ a{
 h5.error{
   color: #ff0000 !important;
 }
+.r img
+{
+  width: 11em;
+  height: 10em;
+}

@@ -6,8 +6,8 @@
         <h4>Diabetes Predictor</h4>
         <hr>
         <div class="col">
-          <div class="row">
-            <img src="assets/images/avatar-1.png" alt="">
+          <div class="row r">
+            <img src="assets/images/istockphoto-875602552-612x612.jpg" alt="">
           </div>
           <div class="row row1">
             <h5>Don't take any risk to allow diabetes <br> in your system</h5>
@@ -27,7 +27,8 @@
           <div class="row row3">
             <p *ngIf="show">{{ result }}</p>
             <div class="row" *ngIf="!show">
-              <img src="assets/images/avatar-1.png" alt="">
+              <img src="assets/images/images.png" *ngIf="result.classname == 'none'" alt="">
+              <img src="assets/images/images (1).jpeg" *ngIf="result.classname == 'error'" alt="">
             </div>
             <div class="row row4" *ngIf="!show">
               <h5 [class]="result.classname">{{ result.message }}</h5>

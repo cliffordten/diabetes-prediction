@@ -13,6 +13,8 @@ export class DTestComponent implements OnInit {
   questionData:any ={};
   pagination:any ={}
   nopage = false;
+  isLoadding = false;
+  load
 
   @Output() clickFinished = new EventEmitter()
   answer:any;
@@ -44,12 +46,20 @@ export class DTestComponent implements OnInit {
       }
       console.log("err",err)
     })
-
   }
 
   finish(){
+    this.isLoadding = true;
+    this.isLoadding = true;
+
+    this.load = setTimeout(() => {
+
+      this.isLoadding = false;
+
     this.clickFinished.emit();
-    this.route.navigate(["test"])
+    this.route.navigate([this.route.url])
+
+    }, 4000);
 
   }
 
