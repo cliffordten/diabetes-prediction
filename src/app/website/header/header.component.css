@@ -36,3 +36,7 @@ a.nav-link:hover {
 .navbar-light .navbar-toggler {
   color: #fff;
 }
+.transparent
+{
+  background-color: #444;
+}

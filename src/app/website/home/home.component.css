@@ -97,12 +97,13 @@ button:hover svg {
 small{
   letter-spacing: 6px;
   margin-top: 1em;
+  color: #fff;
 }
 .mt-4{
   margin-top: 8em !important;
 }
 
-.row.rw.mt-5{
+.row.rw.mt-5, .row.rw.mt-3{
   word-wrap: break-word;
   background-color: #fff;
   box-sizing: border-box;
@@ -190,4 +191,7 @@ a{
 }
 .col.d{
   text-align-last: left;
+}
+.col.d p{
+  margin: 0 !important;
 }

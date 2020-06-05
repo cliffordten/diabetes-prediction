@@ -5,6 +5,8 @@ import { LoginComponent } from './website/login/login.component';
 import { SignupComponent } from './website/signup/signup.component';
 import { Page404Component } from './shared/page404/page404.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AboutDiabetesComponent } from './website/about-diabetes/about-diabetes.component';
+import { GetStartedComponent } from './website/get-started/get-started.component';
 
 
 const routes: Routes = [
@@ -12,10 +14,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: "full" },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'about-diabetes', component: AboutDiabetesComponent },
+  { path: 'getting-set', component: GetStartedComponent },
   { path: 'user', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard]},
   { path: 'doc', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard]},
-  { path: '404page', component: Page404Component },
-  { path: '**', redirectTo: '/404page', pathMatch: "full" }
+  { path: 'admin', loadChildren:  () => import('./dashboard/user/user.module').then(m => m.UserModule), canActivate: [AuthGuard]},
+  { path: '**', component: Page404Component },
+  // { path: '**', redirectTo: '/404page', pathMatch: "full" }
 ];
 
 @NgModule({

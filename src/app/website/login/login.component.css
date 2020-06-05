@@ -24,3 +24,6 @@
 .acc-ic, .acc-ico{
   visibility: hidden;
 }
+.container.contain.mt-4{
+  margin-bottom: 9.95em;
+}

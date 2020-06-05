@@ -7,7 +7,6 @@ import * as $ from 'jquery';
 })
 export class HeaderComponent implements OnInit {
   showHead: boolean = true;
-
   constructor() {
 
 
@@ -28,6 +27,7 @@ export class HeaderComponent implements OnInit {
           $('header').css("background-color","transparent");
         }
 
+
         $('.no-bg').click(function(){
           $('header').css("background-color","transparent");
         })
@@ -36,9 +36,9 @@ export class HeaderComponent implements OnInit {
           $('header').css("background-color","#444");
           window.location.reload()
         })
+
     });
 
   }
-
 
 }

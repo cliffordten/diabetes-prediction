@@ -184,4 +184,7 @@ em{
   font-style: italic;
   color: red;
 }
+.container.contain.mt-1{
+  margin-bottom: 2.78em;
+}
 

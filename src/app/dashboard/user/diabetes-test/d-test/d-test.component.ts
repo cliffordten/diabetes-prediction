@@ -27,7 +27,7 @@ export class DTestComponent implements OnInit {
     insulin: 0,
     height: 0,
     weight: 0,
-    DPF: 0,
+    DPF: 0.338,
     age: 0
   };
 

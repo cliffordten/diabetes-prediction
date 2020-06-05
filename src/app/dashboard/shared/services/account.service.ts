@@ -39,6 +39,10 @@ export class AccountService {
     return this.http.get("/api/v1/user/result", this.options);
   }
 
+  getAllUserAnswers(){
+    return this.http.get("/api/v1/user/answer", this.options);
+  }
+
   getResultDetails(id){
     return this.http.get("/api/v1/user/answer/"+id, this.options);
   }

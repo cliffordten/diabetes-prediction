@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { LoginService } from './website/login/login.service';
 import { AuthGuard } from './guards/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrService } from './shared/toastr.service';
+import { AboutDiabetesComponent } from './website/about-diabetes/about-diabetes.component';
+import { GetStartedComponent } from './website/get-started/get-started.component';
+import { FooterComponent } from './website/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +31,9 @@ import { ToastrService } from './shared/toastr.service';
     Page404Component,
     DocSignupComponent,
     PatSignupComponent,
+    AboutDiabetesComponent,
+    GetStartedComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,9 @@ import { ToastrService } from './shared/toastr.service';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
+
   ],
   providers: [SignupService, LoginService, AuthGuard, ToastrService],
   bootstrap: [AppComponent]
